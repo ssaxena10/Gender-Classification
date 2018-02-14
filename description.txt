@@ -1,40 +1,15 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf100
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww10800\viewh11020\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
 
-\f0\fs24 \cf0 Assignment 4\
-Sharul Saxena\
-A20380920\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-Description: In this assignment, top four celebrities with maximum followers are chosen. They are - Taylor Swift, Justin Bieber, Jimmy Fallon & Rihanna. The aim of this project is to classify their followers based on the tweets extracted. Also, the data is stored in pickle format for easy access. There are following four scripts which are as follows :\
-\
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
-\cf0 Collect.py ->\
-This script will establish twitter connection so as to extract followers of the celebrities mentioned above. Due to rate limit few restrictions will be applied in order to make these scripts run smoothly. Followers per celebrity are limited to 5000 and maximum total tweets are limited to 1500. This script will also create a networkx graph and will save it in pickle form for its use in clustering. Graph will be saved as network.png.\
--> The network graph so obtained shows that Taylor Swift have limited common followers with other 3 celebrities. She has only one follower in common with Rihanna and around 2 with Justin Bieber and none with Jimmy Fallon. On the other hand, Justin Bieber and Rihanna have quite a lot followers in common and same goes with Jimmy Fallon. This analysis may vary, as data collected was limited and might change from time to time.\
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
-\cf0 Cluster.py ->\
-This script will implement community detection on the graph created in collect.py. Girvan-Newman algorithm will be used on the celebrity and their followers graph. The communities detected based on Girvan-Newman provides two clusters which are saved as cluster0.png and cluster1.png. Cluster0 shows three celebrities which does have quite a few followers in common. They are Jimmy Fallon, Justin Bieber and Rihanna. Taylor Swift does not have many followers in common with others as mentioned above. This scripts run on a small sample and shows how people may fall in different communities. \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
-\cf0 Classify ->\
-This script will be used to classify the followers as male or female based on their tweets using US census data. The tweets are first loaded from pickle which are labeled based on their gender using the census data and a training set was then created for the classifier. Then a feature matrix was created from tokens and vocabulary list and with this feature matrix and labeled data, logistic regression model was built. The model was then trained on the tweets and it was then tested. From what the summary.txt shows, model successfully predicts the gender of the follower. By using score() to check mean accuracy on given test data and labels, we are getting 61.4%\
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qj\partightenfactor0
-\cf0 Summarize.py ->\
-This script will be loading pickle files and summarizing the results from above mentioned scripts with an example of a tweet from male and female followers. \
-\
-}
+Description: In this assignment, top four celebrities with maximum followers are chosen. They are - Taylor Swift, Justin Bieber, Jimmy Fallon & Rihanna. The aim of this project is to classify their followers based on the tweets extracted. Also, the data is stored in pickle format for easy access. There are following four scripts which are as follows :
+
+Collect.py ->
+This script will establish twitter connection so as to extract followers of the celebrities mentioned above. Due to rate limit few restrictions will be applied in order to make these scripts run smoothly. Followers per celebrity are limited to 5000 and maximum total tweets are limited to 1500. This script will also create a networkx graph and will save it in pickle form for its use in clustering. Graph will be saved as network.png.
+-> The network graph so obtained shows that Taylor Swift have limited common followers with other 3 celebrities. She has only one follower in common with Rihanna and around 2 with Justin Bieber and none with Jimmy Fallon. On the other hand, Justin Bieber and Rihanna have quite a lot followers in common and same goes with Jimmy Fallon. This analysis may vary, as data collected was limited and might change from time to time.
+
+Cluster.py ->
+This script will implement community detection on the graph created in collect.py. Girvan-Newman algorithm will be used on the celebrity and their followers graph. The communities detected based on Girvan-Newman provides two clusters which are saved as cluster0.png and cluster1.png. Cluster0 shows three celebrities which does have quite a few followers in common. They are Jimmy Fallon, Justin Bieber and Rihanna. Taylor Swift does not have many followers in common with others as mentioned above. This scripts run on a small sample and shows how people may fall in different communities. 
+
+Classify ->
+This script will be used to classify the followers as male or female based on their tweets using US census data. The tweets are first loaded from pickle which are labeled based on their gender using the census data and a training set was then created for the classifier. Then a feature matrix was created from tokens and vocabulary list and with this feature matrix and labeled data, logistic regression model was built. The model was then trained on the tweets and it was then tested. From what the summary.txt shows, model successfully predicts the gender of the follower. By using score() to check mean accuracy on given test data and labels, we are getting 61.4%
+
+Summarize.py ->\
+This script will be loading pickle files and summarizing the results from above mentioned scripts with an example of a tweet from male and female followers.
