@@ -1,5 +1,5 @@
 
-Description: In this assignment, top four celebrities with maximum followers are chosen. They are - Taylor Swift, Justin Bieber, Jimmy Fallon & Rihanna. The aim of this project is to classify their followers based on the tweets extracted. Also, the data is stored in pickle format for easy access. There are following four scripts which are as follows :
+Description: In this project, top four celebrities with maximum followers are chosen. They are - Taylor Swift, Justin Bieber, Jimmy Fallon & Rihanna. The aim of this project is to classify their followers into male and female based on the tweets extracted using US census data. Also, the data is stored in pickle format for easy access. There are following four scripts which are as follows :
 
 Collect.py ->
 This script will establish twitter connection so as to extract followers of the celebrities mentioned above. Due to rate limit few restrictions will be applied in order to make these scripts run smoothly. Followers per celebrity are limited to 5000 and maximum total tweets are limited to 1500. This script will also create a networkx graph and will save it in pickle form for its use in clustering. Graph will be saved as network.png.
